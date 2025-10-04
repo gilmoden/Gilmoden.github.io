@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um texto: <input type="text" id="texto-digitado">
+    <br>
+    <button id="enviar">Enviar</button>
+
+    <script>
+        document.getElementById("enviar").onclick = function () {
+            var texto = document.getElementById("texto-digitado").value;
+
+            if (texto.includes("teste")) {
+                alert("O texto inclui a palavra teste");
+            } else if (texto.startsWith("indaiatuba")) {
+                alert("o testo começa com indaiatuba");
+            } else if (texto.endsWith("sp")) {
+                alert("otexto termina com sp");
+            } else if (texto == "exato") {
+                alert("Você digitou exato")
+            } else {
+                alert("não passou nas condições");
+            }
+            
+        }
+    </script>
+</body>
+</html>
